@@ -161,5 +161,5 @@ For many people, one of the most important pieces of computer software is a  tex
 - ![ATOM](../.img/atom.png) a extencible text editor with bunch tools that can be added.
 - ![VSCODIUM](../.img/vscode.png) a clone project of atom and vscode with more native OpenSource licensing and agenda.
 
-[Exercises](../Exercises/01_hello_world/README.md)
+[Exercises](../Exercises/00_hello_world/README.md)
 
