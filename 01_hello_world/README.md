@@ -81,9 +81,9 @@ au bufnewfile *.sh 0r /home/$USER/.vim/sh_header.temp
 ```
 Where:
 
-`au` – means autocmd
-`bufnewfile` – event for opening a file that doesn’t exist for editing.
-`*.sh` – consider all files with .sh extension
+- `au` – means autocmd
+- `bufnewfile` – event for opening a file that doesn’t exist for editing.
+- `*.sh` – consider all files with .sh extension
 
 so to conclude, after generating a file and adding in to it, script commands with `hw` script at `/home/que/bin` folder:
 
