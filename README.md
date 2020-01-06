@@ -7,21 +7,21 @@ Hope i find you in well and hope that you came accross this books in wondering a
 
 Below here are the chapter names of the book that i've been trying to developer for over the decade:
 
-- [Chapter 0](01_hello_world/README.md)
-- [Chapter 1](02_in_out_and_through/README.md)
-- [Chapter 2](03_looping_and_branching/README.md)
-- [Chapter 3](04_cmd_parsing_and_parsing/README.md)
-- [Chapter 4](05_parameters_and_variables/README.md)
-- [Chapter 5](06_functions/README.md)
-- [Chapter 6](07_string_manipulation/README.md)
-- [Chapter 7](08_file_operations_and_cmds/README.md)
-- [Chapter 8](09_reserved_words_and_builtins/README.md)
-- [Chapter 9](10_writing_bug_free/README.md)
-- [Chapter 10](11_programming_for_the_cmd/README.md)
-- [Chapter 11](12_runtime_conf/README.md)
-- [Chapter 12](13_data_processing/README.md)
-- [Chapter 13](14_scripting_the_screen/README.md)
-- [Chapter 14](15_entry_level_programming/README.md)
+- [Chapter 0](00_hello_world/README.md)
+- [Chapter 1](01_in_out_and_through/README.md)
+- [Chapter 2](02_looping_and_branching/README.md)
+- [Chapter 3](03_cmd_parsing_and_parsing/README.md)
+- [Chapter 4](04_parameters_and_variables/README.md)
+- [Chapter 5](05_functions/README.md)
+- [Chapter 6](06_string_manipulation/README.md)
+- [Chapter 7](07_file_operations_and_cmds/README.md)
+- [Chapter 8](08_reserved_words_and_builtins/README.md)
+- [Chapter 9](09_writing_bug_free/README.md)
+- [Chapter 10](10_programming_for_the_cmd/README.md)
+- [Chapter 11](11_runtime_conf/README.md)
+- [Chapter 12](12_data_processing/README.md)
+- [Chapter 13](13_scripting_the_screen/README.md)
+- [Chapter 14](14_entry_level_programming/README.md)
 
 Within these chapters,that will change and get update as time will flow, I'll try to give more pragmatic way to learn and practice the shell hard way.
 - But why the hard way?
