@@ -1,5 +1,5 @@
 <center style='background-color:lightgreen'>
-<h1 style='color:black'>learning bash the had way</h1>
+<h1 style='color:black'>learning bash the hard way</h1>
 </center>
 
 # Welcome
@@ -23,7 +23,7 @@ Below here are the chapter names of the book that i've been trying to developer 
 - [Chapter 13](14_scripting_the_screen/README.md)
 - [Chapter 14](15_entry_level_programming/README.md)
 
-Within these chapters,that will change and get update with time, i'll try to give more pragmatic way to leearn and practice the shell hard way.
+Within these chapters,that will change and get update as time will flow, I'll try to give more pragmatic way to learn and practice the shell hard way.
 - But why the hard way?
   
-Well the term was created by my favority author named [Zed A. Shaw](https://learncodethehardway.com), by claiming that the hard way is the only way, that is effective to learning programming,and I could not have agreed more with him more. Yet, I don't agree with him on all term, hence in this book, i'll be trying to emphesize the things that i think are important, and hopefully with your help, i'll be able to develop a book that will be interesting, educational, 
+Well the term was created by my favority author named [Zed A. Shaw](https://learncodethehardway.com), by claiming that the hard way is the only way, that is effective to learning programming, I could not have agreed more with him. Yet, I don't agree with him on all term, hence in this book, i'll be trying to emphesize the things that i think are important, and hopefully with your help, i'll be able to develop a book that will be interesting, educational, 
