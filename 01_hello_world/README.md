@@ -157,9 +157,9 @@ The BSD variety of echo accepted the option-n, which suppressed the newline. AT&
 
 ### A word of advice about text processors and IDE's
 For many people, one of the most important pieces of computer software is a  text processor. A text editor a toolfor creating  shell scripts, PostScript programs, webpages, and more.A text editor operates on plain-text files. It stores only the characters you type. You can write scripts in any text editor, from the basic vi or nano to the full-featuredemacs or nedit. The better text editors allow you to have more than one file open at atime. They make editing code easier with, for example, syntax highlighting, automatic indentation, autocompletion, spell checking, macros, search and replace, and undo. Ultimately, which editor you choose is a matter of personal preference. During this book, I used VIM with bunch of plugins, but i am not ashamed to climed that for other types of projects, I have used tools such as:
-- [GEANY](../.img/geany.png) a lightweight IDE for general purpose of development.
-- [ATOM](../.img/atom.png) a extencible text editor with bunch tools that can be added.
-- [VSCODIUM](../.img/vscode.png) a clone project of atom and vscode with more native OpenSource licensing and agenda.
+- ![GEANY](../.img/geany.png) a lightweight IDE for general purpose of development.
+- ![ATOM](../.img/atom.png) a extencible text editor with bunch tools that can be added.
+- ![VSCODIUM](../.img/vscode.png) a clone project of atom and vscode with more native OpenSource licensing and agenda.
 
 [Exercises](../Exercises/01_hello_world/README.md)
 
