@@ -1,1 +1,0 @@
-*basics software development

@@ -1,1 +1,0 @@
-*building utilities for terminal

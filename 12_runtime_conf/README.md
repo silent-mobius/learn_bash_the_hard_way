@@ -1,1 +1,0 @@
-*building shell confs
