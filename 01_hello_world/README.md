@@ -30,8 +30,26 @@ test is /usr/bin/test
 ```
 Typically, Unix command names are as short as possible. They are often the first two consonants of a descriptive word (for example, mv for move or ls for list) or the first letters of a descriptive phrase.
 
-Many shell programmers add a suffix, such as `.sh`,to indicate that the program is a shell script. The script doesn’t need it, and I use one only for programs that are being developed. My suffix is `-sh`, and when the program is finished, I'd  suggest remove it. A shell script becomes another command and doesn’t need to be distinguished from any other type of command.
+Many shell developers add a suffix, such as `.sh`,to indicate that the program is a shell script. The script doesn’t need it, and I use one only for programs that are being developed. The suffix is `-sh`, and when the program is finished, I'd  suggest remove it. A shell script becomes another command and doesn’t need to be distinguished from any other type of command.
 
 #### Directory for the Script:
 
-When the shell is given the name of a command to execute, it looks for that name in thedirectories listed in the PATH variable. This variable contains a colon-separated list of directories that contain executable commands.
+When the shell is given the name of a command to execute, it looks for that name in the directories listed in the `PATH` variable. This variable contains a colon-separated list of directories that contain executable commands.
+directories that contain executable commands. This is a typical value for $PATH `:/bin:/usr/bin:/usr/local/bin:/home/.local/bin`
+
+As such, you iwsh to run your script from shell, you must place it under PATH or edit PATH to reach your script by editing the PATH.
+Commands are usually stored in directories named `bin`, and a user’s personal programs are stored in a `bin` subdirectory in the $HOME directory. To create that directory, use this command:
+
+```sh
+[que@core] mkdir $HOME/bin
+```
+
+Now that it exists, it must be added to the PATH variable:
+
+```sh
+[que@core]PATH=$PATH:$HOME/bin
+```
+
+For this change to be applied to every shell you open, add it to a file that the shell will source when it is invoked. This will be .bash_profile, .bashrc, or .profile depending on how bash is invoked. These files are sourced only for interactive shells, not for scripts.
+
+### Creating the script and running it
