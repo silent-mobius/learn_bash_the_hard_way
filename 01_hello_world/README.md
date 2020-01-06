@@ -28,7 +28,9 @@ test is a shell builtin
 test is a shell builtin
 test is /usr/bin/test
 ```
-Typically, Unix command names are as short as possible. They are often the first twoconsonants of a descriptive word (for example, mv for move or ls for list) or the firstletters of a descriptive phrase.
+Typically, Unix command names are as short as possible. They are often the first two consonants of a descriptive word (for example, mv for move or ls for list) or the first letters of a descriptive phrase.
+
+Many shell programmers add a suffix, such as `.sh`,to indicate that the program is a shell script. The script doesn’t need it, and I use one only for programs that are being developed. My suffix is `-sh`, and when the program is finished, I'd  suggest remove it. A shell script becomes another command and doesn’t need to be distinguished from any other type of command.
 
 #### Directory for the Script:
 
