@@ -75,6 +75,12 @@ The list of special goes as follows:
 
 ### Variables
 
+A `variable` is a parameter denoted by a name; a name is a word containing only letters, numbers, or underscores and beginning with a letter or an underscore. Values can be assigned to variables in the following manner: 
+```sh
+name=VALUE
+```
+**Please Note**  that Bash is very particular about spacing: there are no spaces before the = and none after. If you have spaces, **_the command would not work_**.
+
 ## Standard Input, Output Streams and Redirections.
 
 ## Pipelines
