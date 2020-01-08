@@ -30,7 +30,7 @@ printf "Hello, %s!\n" "$1"
 ```
 and when ever you will run the script with an argument, it will respond with the output:
 
-```
+```sh
 [que@core]$ hello Alex
 Hello, Alex!
 
@@ -48,15 +48,30 @@ shift
 printf "Hello, %s!\n" "$1"
 ```
 here comes the output:
-```
+```sh
 [que@core]$ hello Johnny Alex
 Hello, Alex!
 ```
 
-That
+Thats all fine, but here is something to take into consideration: when ever you use `shift` command, the paramters discarded are gone and **cannot** be retrieved again.
 
+---
 
-### Special Characters
+### Special Parameters
+
+These paramenters are called special mainly due to their use in shell itself. We could use them to try and get information about `positional parameters` or with `variables`.
+The list of special goes as follows:
+
+- $\@ - expention parameter: expand to the value of all the positional parameters combined.
+- $\* - expention parameter: expand to the value of all the positional parameters combined.(yes - they are the same.)
+- $\# - expands to the number of positional parameters. for examples, tell you how many elements you have in array(yes, that array, the construct in programming language.)
+- $\0 - contains the path to the currently running script or to the shell itself if no script is being executed. Mainly used instead of `hard coding` the script name in script.
+- $\$ - contains the process identification number (PID) of the current process. thats you trace your script PID.
+- $\? - is set to the exit code of the last-executed command. thats how you know if the command/s have succedded or not.
+- $\_ - is set to the last argument to that command.
+- $\! - contains the PID of the last command executed in the background.
+- $\- - is set to the option flags currently in effect.
+
 
 ### Variables
 
