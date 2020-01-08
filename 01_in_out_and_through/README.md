@@ -65,7 +65,7 @@ The list of special goes as follows:
 - $\@ - expention parameter: expand to the value of all the positional parameters combined.
 - $\* - expention parameter: expand to the value of all the positional parameters combined.(yes - they are the same.)
 - $\# - expands to the number of positional parameters. for examples, tell you how many elements you have in array(yes, that array, the construct in programming language.)
-- $\0 - contains the path to the currently running script or to the shell itself if no script is being executed. Mainly used instead of `hard coding` the script name in script.
+- $0 - contains the path to the currently running script or to the shell itself if no script is being executed. Mainly used instead of `hard coding` the script name in script.
 - $\$ - contains the process identification number (PID) of the current process. thats you trace your script PID.
 - $\? - is set to the exit code of the last-executed command. thats how you know if the command/s have succedded or not.
 - $\_ - is set to the last argument to that command.
