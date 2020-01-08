@@ -83,6 +83,41 @@ name=VALUE
 
 ## Standard Input, Output Streams and Redirections.
 
+In Unix (of which Linux is a variety), everything is a stream of bytes. The streams are accessible as files, but there are three streams that are rarely accessed by a filename. These are the input/output (I/O) streams attached to every command: standard input, standard output, and standard error. By default, these streams are connected to your terminal. When a command reads a character or a line, it reads from the standard input stream,which is the keyboard. When it prints information, it is sent to the standard output, your monitor. The third stream, standard error, is also connected to your monitor; as the name implies, it is used for error messages. These streams are referred to by numbers, called file-descriptors (FDs). These are 0, 1, and 2, respectively. The stream names are also often contracted to :
+- stdin  : 0 - your keyboard.
+- stdout : 1 - your screen for outputs.
+- stderr : 2 - your screen for errors.
+  
+```sequence
+stdin--> Kernel: sending in data
+Note right of Kernel
+Kernel--> stdout: printing out data
+Kernel--> stderr: printing out error
+```
+
+
+### Reirections: >,>> and <
+
+I/O streams can be redirected to (or from) a file or into a pipeline
 ## Pipelines
+
+Pipelines connect the standard output of one command directly to the standard input ofanother. The pipe symbol (|) is used between the commands:
+
+```sh
+[que@core]$ printf "%s\n" "$RANDOM" "$RANDOM" "$RANDOM" "$RANDOM"| tee FILENAME
+618
+11267
+5890
+8930
+```
+The tee command reads from the standard input and passes it to one or more files aswell as to the standard output. $RANDOM is a bash variable that returns a different integerbetween 0 and 32,767 each time it is referenced.
+
+```sh
+[que@core]$ cat FILENAME
+618
+11267
+5890
+8930
+```
 
 [Exercises](../Exercises/../01_in_out_and_through/README.md)
