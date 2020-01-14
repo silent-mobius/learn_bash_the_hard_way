@@ -81,24 +81,36 @@ name=VALUE
 ```
 **Please Note**  that Bash is very particular about spacing: there are no spaces before the = and none after. If you have spaces, **_the command would not work_**.
 
-## Standard Input, Output Streams and Redirections.
+## Standard Input, Output, Error Streams and Redirections.
 
-In Unix (of which Linux is a variety), everything is a stream of bytes. The streams are accessible as files, but there are three streams that are rarely accessed by a filename. These are the input/output (I/O) streams attached to every command: standard input, standard output, and standard error. By default, these streams are connected to your terminal. When a command reads a character or a line, it reads from the standard input stream,which is the keyboard. When it prints information, it is sent to the standard output, your monitor. The third stream, standard error, is also connected to your monitor; as the name implies, it is used for error messages. These streams are referred to by numbers, called file-descriptors (FDs). These are 0, 1, and 2, respectively. The stream names are also often contracted to :
-- stdin  : 0 - your keyboard.
-- stdout : 1 - your screen for outputs.
-- stderr : 2 - your screen for errors.
+In Unix and Linux distributions, everything is a stream of bytes. The streams are accessible as files, but there are three streams that are rarely accessed by a filename. These are the input/output (I/O) streams attached to every command: standard input, standard output, and standard error. By default, these streams are connected to your terminal. When a command reads a character or a line, it reads from the standard input stream,which is the keyboard. When it prints information, it is sent to the standard output, your monitor. The third stream, standard error, is also connected to your monitor; as the name implies, it is used for error messages. These streams are referred to by numbers, called file descriptors (FDs). These are 0, 1, and 2, respectively. The stream names are also often contracted to :
+
+### A word about File Descriptors
+
+In Linux and Unix, everything is a file. Regular file, Directories, and even Devices are files. Every File has an associated number called File Descriptor(FD).
+
+Your screen also has a File Descriptor. When a program is executed the output is sent to File Descriptor of the screen, and you see program output on your monitor. If the output is sent to File Descriptor of the printer, the program output would have been printed. 
+
+![ilustration](../.img/stdin_stdout_stderr.png)
+
+- Standard Input:  stdin  : 0 - your keyboard.
+- Standard Output: stdout : 1 - your screen for outputs.
+- Standard Error:  stderr : 2 - your screen for errors.
   
-```sequence
-stdin--> Kernel: sending in data
-Note right of Kernel
-Kernel--> stdout: printing out data
-Kernel--> stderr: printing out error
-```
 
 
-### Reirections: >,>> and <
+### Reirections: >,>>, 2>, 2>>, < and <<
 
-I/O streams can be redirected to (or from) a file or into a pipeline
+I/O streams can be redirected to (or from) a file or into a pipeline... Yeah, really... `but what does it means? and how is it done?`
+
+Redirection is a feature in Linux such that when executing a command, you can change the standard input/output/error devices. The basic workflow of any Linux command is that it takes an input and give an output. With redirection, the above standard input/output/error can be changed. Lets see some of the examples to emphesize those words:
+
+#### Standard Input: stdin < <<
+
+#### Standard Output: stdout > >>
+
+#### Standard Error: stdout 2> 2>>
+
 ## Pipelines
 
 Pipelines connect the standard output of one command directly to the standard input ofanother. The pipe symbol (|) is used between the commands:
