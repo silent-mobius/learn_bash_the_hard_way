@@ -135,13 +135,13 @@ msg_hello="Hello, World!"
 printf "%s\n" "$msg_hello" !"
 ```
 
-Mind that version number was advanceds due to minor and misc changes in code.
+**NOTE** Mind that version number was advanceds due to minor and misc changes in code.
 
 
-### echo, and Why You Should Avoid It
+### echo and Why You Should Avoid It
 When I started writing shell scripts, I soon learned about the two main branches of Unix: AT&T’s System V and BSD. One of their differences was the behavior of echo. An internal command in all modern shells, echo prints its arguments with a single space between them to the standard output stream, followed by a newline: 
 ```sh
-$echo duckity duck
+[que@core]$ echo duckity duck
 duckity duck
 ```
 The default newline can be suppressed in one of two ways, depending on the shell:
@@ -156,10 +156,31 @@ echo "No newline\c" No newline
 The BSD variety of echo accepted the option-n, which suppressed the newline. AT&T’s version used an escape sequence, \c, to do the same thing.The trouble is that bash has an xpg_echo option (XPG stands for X/Open Portability Guide, a specification for Unix systems) that makes echo behave like that other version. This can be turned on or off while in the shell (using shopt -sxpg_echo either at the command line or in a script), or it can be turned on when the shell is compiled. In other words, even in bash, you cannot be absolutely sure which behavior you are going to get. If you limit the use of echo to situations where there cannot be a conflict, that is,where you are sure the arguments do not begin with -n and do not contain escape sequences, you will be fairly safe. 
 
 ### A word of advice about text processors and IDE's
+
 For many people, one of the most important pieces of computer software is a  text processor. A text editor a toolfor creating  shell scripts, PostScript programs, webpages, and more.A text editor operates on plain-text files. It stores only the characters you type. You can write scripts in any text editor, from the basic vi or nano to the full-featuredemacs or nedit. The better text editors allow you to have more than one file open at atime. They make editing code easier with, for example, syntax highlighting, automatic indentation, autocompletion, spell checking, macros, search and replace, and undo. Ultimately, which editor you choose is a matter of personal preference. During this book, I used VIM with bunch of plugins, but i am not ashamed to climed that for other types of projects, I have used tools such as:
 - ![GEANY](../.img/geany.png) a lightweight IDE for general purpose of development.
 - ![ATOM](../.img/atom.png) a extencible text editor with bunch tools that can be added.
 - ![VSCODIUM](../.img/vscode.png) a clone project of atom and vscode with more native OpenSource licensing and agenda.
+  
+### Additional suggestion regarding code saving
+
+From what i  have gather in these last decade, most of people treat Shell Script, as something expandable. thus usually when ever they need to save a script/tool they tend to drop it in some folder and use, `but there is no update for those same tools and usually they are considered re-doable.`
+I personally consider Shell Script to be on the same level as any other scripting or development language. Meaning that, there is a roadmap or plan that will be the guidance to future of that specific script or set of scripts.
+
+Long story short - All languages use `Version Control`: the most popular of them all being `git`. Git is distributed version control system and to use it locally, you only need to have git on your PC/Laptop/Device. 
+
+Every git uses remote server to save the code and most of them do it for free, mainly because of the tool being OpenSource.
+here is a list of those services and some other tutorials:
+- simple git tutorial to get [started](https://rogerdudler.github.io/git-guide/)
+
+- [git](https://git-scm.com/) 
+- [github](https://github.com/)
+- [gitlab](https://gitlab.com)
+- [bitbucket](https://bitbucket.org/)
+- there are bunch of other with additional service and you are welcome to [check](https://www.git-tower.com/blog/git-hosting-services-compared/)
+
+**NOTE** all the text editors above support git and can be performed from them.
+
 
 [Exercises](../Exercises/00_hello_world/README.md)
 
