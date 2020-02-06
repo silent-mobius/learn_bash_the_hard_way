@@ -12,6 +12,7 @@ At the heart of any programming language are `condition check`  and `loop iterat
 - Condition check execution is making a choice between two or more actions, one of which may be to do nothing, based on a condition.
 - Loop iteration is the repetition of a section of code until a condition changes.
 
+There several types of conditional execution: 
 
 - `if then fi`
 - `case esac`
@@ -41,11 +42,11 @@ bash: mkdir: cannot create directory '/qwerty': Permission denied
 ```
 
 
-In the shell, there are three types of loop:
+In the shell, there are three main types of loop:
 
 - `while CONDITION;do ;done`
 - `until CONDITION;do; done`
 - `for iterators in DATA; do  ;done`
 
-There several types of conditional execution: 
+
 
